@@ -1,0 +1,30 @@
+.content-center {
+    text-align: center;
+    display: block;
+}
+
+.content-output {
+    margin-left: 50px;
+}
+
+button {
+    flex: 1;
+    background-color: #03BD75;
+    border-width: 0;
+    padding: 20px 0;
+    color: #332D2D;
+    outline-style: none;
+}
+
+.content-btn {
+    display: flex;
+}
+
+button:hover{
+    background-color: #72d9b1;
+}
+
+pre {
+    color: #999997;
+}
+
