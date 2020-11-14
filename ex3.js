@@ -2,7 +2,7 @@ const exercise3 = () => {
     const userInput = prompt('Введите что-нибудь')
     let reversText = ''
 
-    userInput.split('').reverse().map(i => reversText += i)
+    userInput.split('').reverse().join('');
     console.log(reversText)
     document.getElementById("output").innerHTML = reversText
 }
@@ -13,3 +13,5 @@ const ex3 = () => {
         '\n' +
         'Дана строка. Необходимо вывести в консоль перевёрнутый вариант. Например, "Hello" -> "olleH".'
 }
+
+// Всё верно, но можно было сделать чуть проще (без методв map). Выше исправила

@@ -2,17 +2,23 @@ const countEvenOddNumbers = arr => {
     let oddNumbers = 0
     let evenNumbers = 0
     let zero = 0
-    arr.map(i => {
-        if (i === 0) return zero++
-        if (typeof i !== 'number') return null
-        if (i%2 === 0) return evenNumbers++
-        return oddNumbers++
+    arr.forEach(item => {
+        if (typeof item === 'number' && !isNaN(item)) {
+            if (item === 0) {
+                zero++;
+            } else if (item % 2 === 0) {
+                evenNumbers++;
+            } else {
+                oddNumbers++;
+            }
+        }
     })
     console.log('Четных чисел - ', evenNumbers)
     console.log('Нечетных чисел - ', oddNumbers)
     console.log('Нулей - ', zero)
 }
 
+// Тут тоже есть пару замечаний. Во-первых, то же, что и в предыдущем задании - избыточное использование map. А во-вторых, не хватает проверки на NaN. Значение NaN имеет особенность, что хотя оно и не является числом, его тип равен number. Поэтому это значение пройдет вашу проверку на typeof и будет ошибочно причислено к нечетным значениям. Выше исправила на более правильный вариант
 
 const exercise7 = () => {
     const arr = [3, 3, 3, 4, 4, 4, 4, 0, 0, '0', '3', '4', null, Object, {}, [], ()=>{}]
